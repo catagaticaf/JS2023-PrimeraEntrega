@@ -1,7 +1,12 @@
 let saludo = alert(
   "Gracias por comprar con nosotros! A continuación deberá brindarnos información sobre su compra"
 );
-let monto = parseInt(prompt("Ingrese el monto total de su compra"));
+let monto =""
+do {
+  monto = parseInt(prompt("Ingrese el monto total de su compra"));
+  
+} while (monto == "" || isNaN(monto));
+
 let formaDePago = parseInt(
   prompt(
     "Por favor selecciones su forma de pago:\n 1) efectivo (15%off)\n  2)12 cuotas (20% de recargo)\n 3) transferencia bancaria (10% off)\n 4) 3 cuotas sin interes"
